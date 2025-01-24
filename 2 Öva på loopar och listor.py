@@ -1,6 +1,6 @@
 
 # Veckouppgift3 vecka 4, Öva på loopar och listor
-#---------------------------------------------------
+#----------------------------------------------------
 
 # Svar: 1a Skriv färdigt kodexemplet.
 
