@@ -72,31 +72,60 @@ print(element)
 movies = ["Alien", "Twins", "Mad Max", "Matrix"]
 #print(movies)                      #version 1 skriver ut vanlig lista
 #print(*movies, sep = "\n")         # version 2 skriver ut innehåll med ny rad
-
+print()
+print("Svar 3a. Nedan är listan med fyra filmer utskriven rad för rad")
 x = 0                               # version 3 räknare som skriver ut med ny rad
 for x in range(len(movies)):
     print(movies[x])
 
 ######################################
 # svar: 3b Lägg till "Fellowship of the ring" sist i listan.
-
+print()
+print("Svar 3b. Nedan är listan efter att ha lagt in Fellowship of the ring The two towers i sista positionen...")
 movies = ["Alien", "Twins", "Mad Max", "Matrix"]
 movies.append("Fellowship of the ring")
+for x in range(len(movies)):
+    print(movies[x])
 
 #######################################
 # Svar: 3c Lägg till "The two towers" på första platsen i listan. (index noll)
 # Med insert(position, new_entry) kan man skapa en ny post på valfri position
 
-#movies = ["Alien", "Twins", "Mad Max", "Matrix"]
-movies.insert(0,"The two towers")
+movies.insert(0,"The two towers ")
+print()
+print("Svar 3c. Nedan är listan efter att ha insert The two towers i första positionen...")
 x = 0                               # version 3 räknare som skriver ut med ny rad
 for x in range(len(movies)):
     print(movies[x])
 ########################################
 # svar: 3d Ta reda på vilken position (index) "Fellowship of the ring" har nu.
 print()
-print("The Fellowship of the ring, har nu position",(movies.index("Fellowship of the ring")), "i listan")
+print("Svar 3d. The Fellowship of the ring, har nu position",(movies.index("Fellowship of the ring")), "i listan")
 
 ########################################
+# Svar: 3e Ta bort en annan av filmerna. Har Fellowship-filmen ändrat index?
+
+movies.remove("Mad Max")
+position = movies.index("Fellowship of the ring") + 1
+print("Svar 3e. Efter att ha tagit bort Mad Max, har nu The Fellowship of the ring, position",(position), "i listan")
+########################################
+# svar: 3f Ta reda på hur lång listan är. (len)
+
+print("Svar 3f. Det finns nu", len(movies), "filmer i listan")
+
+########################################
+# Svar: 3g Vänd listan baklänges.
+
+movies.reverse()
+print("Svar 3g. Listan ör nu i omvänd ordning enligt...", (movies))
+
+########################################
+# Svar: 3h Sortera listan stigande i bokstavsordning.
+
+movies.sort()
+print("Svar 3g. Listan ör nu i bodstavsordning enligt...", (movies))
+
+
+
 
 
