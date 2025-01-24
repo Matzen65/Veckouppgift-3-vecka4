@@ -80,7 +80,7 @@ movies.remove("Mad Max")
 position = movies.index("Fellowship of the ring") + 1
 print("Svar 3e. Efter att ha tagit bort Mad Max, har nu The Fellowship of the ring, position",(position), "i listan")
 
-#---------------------------------------------------
+#----------------------------------------------------
 # svar: 3f Ta reda på hur lång listan är. (len)
 
 print("Svar 3f. Det finns nu", len(movies), "filmer i listan")
