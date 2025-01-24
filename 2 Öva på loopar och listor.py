@@ -28,9 +28,7 @@ print("Summan av talen 1 till 10 är: " + str(answer))
 3h Sortera listan stigande i bokstavsordning.
 
 """
-
-
-
+from bisect import insort
 
 #####################################
 # Svar: 1a Skriv färdigt kodexemplet.
@@ -71,8 +69,34 @@ print(element)
 # Svar: 3a  Skapa en lista med namnen på fyra filmer. Namnen ska vara strängar.
 #           Skriv ut hela listan 2med funktionen print.
 
-filmer = ["Alien", "Twins", "Mad Max", "Matrix"]
+movies = ["Alien", "Twins", "Mad Max", "Matrix"]
+#print(movies)                      #version 1 skriver ut vanlig lista
+#print(*movies, sep = "\n")         # version 2 skriver ut innehåll med ny rad
 
+x = 0                               # version 3 räknare som skriver ut med ny rad
+for x in range(len(movies)):
+    print(movies[x])
 
+######################################
+# svar: 3b Lägg till "Fellowship of the ring" sist i listan.
+
+movies = ["Alien", "Twins", "Mad Max", "Matrix"]
+movies.append("Fellowship of the ring")
+
+#######################################
+# Svar: 3c Lägg till "The two towers" på första platsen i listan. (index noll)
+# Med insert(position, new_entry) kan man skapa en ny post på valfri position
+
+#movies = ["Alien", "Twins", "Mad Max", "Matrix"]
+movies.insert(0,"The two towers")
+x = 0                               # version 3 räknare som skriver ut med ny rad
+for x in range(len(movies)):
+    print(movies[x])
+########################################
+# svar: 3d Ta reda på vilken position (index) "Fellowship of the ring" har nu.
+print()
+print("The Fellowship of the ring, har nu position",(movies.index("Fellowship of the ring")), "i listan")
+
+########################################
 
 
