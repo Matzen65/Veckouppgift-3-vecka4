@@ -64,7 +64,8 @@ print()
 for y in range(1, 7):
     s = ""
     for x in range(1, 9):
-        if x == 1 or x==3 or x==5 or x==7:
+        # väljer att använda udda tal(positioner)
+        if x % 2 == 1:
             s += "#"
         else:
             s += "."
@@ -74,9 +75,7 @@ print()
 for y in range(1, 7):
     s = ""
     for x in range(1, 9):
-        if  y == 2 and 3 <= x <= 6 or y == 5 and 3 <= x <= 6:
-            s += "#"
-        elif x==2 and 2 <= y <= 5 or x==7 and 2 <= y <= 5:
+        if (2 <= x <= 7 and 2 <= y <= 5) and not (3 <= x <= 6 and 3 <= y <= 4):
             s += "#"
         else:
             s += "."
@@ -86,22 +85,22 @@ print()
 for y in range(1, 7):
     s = ""
     for x in range(1, 9):
-        if  x == y-5 or x == y-2 or x == y+1 or x == y+4 or x == y+7:
+        if x % 3 == (y + 1) % 3:
             s += "#"
-        elif x == y-4 or x == y-1 or x == y+2 or x == y+5:
-            s += "0"
+        elif x % 3 == (y + 2) % 3:
+            s += "O"
         else:
             s += "."
+
     print(s)
 
 print()
 for y in range(1, 7):
     s = ""
     for x in range(1, 9):
-        if  y >= 1 and y<=3 and (x == 3 or x == 6):
-            s += "#"
-        elif y>=5 and (x == y-5 or x == y-3 or x == y-1 or x == y+1 or x == y+3):
+        if (x % 3 == 0 and y <= 3) or (x % 2 == 0 and y == 5) or (x % 2 == 1 and y == 6):
             s += "#"
         else:
             s += "."
+
     print(s)
