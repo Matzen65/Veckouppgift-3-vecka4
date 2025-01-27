@@ -102,7 +102,7 @@ while True:
         print()
         item = input("Skriv in en ny sak du måste komma ihåg att göra: ")
         list.append(item)
-        print(f"Ok, du lade till {item} i listan")
+        print(f'Ok, du lade till "{item}" i listan')
 
     if val == 3:
         print()
