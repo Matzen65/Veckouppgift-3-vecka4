@@ -118,5 +118,8 @@ while True:
         print()
         print(done_list)
         regret = int(input("välj punkt ovan som ska läggas tillbaka i att göra listan: "))
+        print("Du har valt att återställa" ,done_list[regret], "till din Todolista")
+        list.append(done_list[regret])
+        print(list)
 
 
